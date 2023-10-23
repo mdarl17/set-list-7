@@ -18,7 +18,7 @@ RSpec.describe "the songs show page" do
     song_2 = artist.songs.create!(title: "Call Me Maybe", length: 207, play_count: 21456357)
 
     visit "/songs/#{song.id}"
-
+    
     expect(page).to have_content(artist.name)
   end
 end
